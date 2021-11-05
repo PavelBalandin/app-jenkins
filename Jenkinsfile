@@ -18,7 +18,8 @@ pipeline {
         stage('Deploy') {
                 agent any
                 steps {
-                    sh 'docker-compose up'
+                    sh 'docker-compose down'
+                    sh 'docker-compose up -d'
                 }
             }
     }
