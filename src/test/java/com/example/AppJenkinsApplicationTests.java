@@ -15,7 +15,7 @@ class AppJenkinsApplicationTests {
 
     @Test
     void simpleTestTwo() {
-        int a = 200 + 100;
+        int a = 180 + 100;
 
         assertEquals(300, a);
     }
