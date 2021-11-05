@@ -15,5 +15,10 @@ pipeline {
                 sh 'mvn clean test'
             }
         }
+        stage('Deploy') {
+                steps {
+                    sh 'docker-compose up'
+                }
+            }
     }
 }
