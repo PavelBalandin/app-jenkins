@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean build'
+                sh 'mvn clean package'
             }
         }
         stage('Test') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Deploy') {
                 steps {
-                    sh 'docker-compose up'
+                    sh '/usr/bin/docker-compose up'
                 }
             }
     }
