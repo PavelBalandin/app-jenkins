@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping
     public ResponseEntity<String> getTestMessage() {
-        return new ResponseEntity<>("New 2900", HttpStatus.OK);
+        return new ResponseEntity<>("Message from docker container Java app", HttpStatus.OK);
     }
 }
