@@ -1,14 +1,16 @@
 pipeline {
-    agent none
+    agent {
+        docker {
+            image 'maven:3.8.1-adoptopenjdk-8'
+        }
+    }
     stages {
         stage('Build') {
-            agent {docker 'maven:3.8.1-adoptopenjdk-8'}
             steps {
                 sh 'mvn clean package'
             }
         }
         stage('Test') {
-            agent {docker 'maven:3.8.1-adoptopenjdk-8'}
             steps {
                 sh 'mvn clean test'
             }
