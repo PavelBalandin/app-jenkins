@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  app:
+    container_name: test-app-jenkins
+    image: test-app-jenkins
+    build:
+      context: .
+    ports:
+      - 8090:8080
